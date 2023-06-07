@@ -1,0 +1,102 @@
+/* PizzaMenuItems : */
+
+.pizzaHeadBar {
+  position: relative;
+  top: 80px;
+  height: 85px;
+  background-color: rgba(244, 206, 116, 0.2);
+  margin-top: 10px;
+  color: white;
+  font-family: cursive;
+  text-align: center;
+  z-index: -1;
+}
+.pizzaHeadBar h1 {
+  padding-top: 15px;
+}
+.pizzaMenuItems {
+  position: relative;
+  top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: white;
+}
+/* .pizaItemBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+} */
+.pizzaItemContainer {
+  margin: 40px 0 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.pizaItem {
+  width: 200px;
+  height: 200px;
+  background-color: chocolate;
+  border: 3px solid red;
+}
+.pizaItemWithDescription {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+.pizaItemWithDescription h3 {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+.pizaItemWithDescription select {
+  margin: 10px 0 10px 0;
+  width: 60px;
+  cursor: pointer;
+}
+.pizaItemWithDescription .buyPizzaBtn {
+  width: 70px;
+  height: 25px;
+}
+.pizaItemWithDescription .addPizzaBtn {
+  width: 70px;
+  height: 25px;
+  margin-left: 10px;
+}
+
+/* pizzaIngridientsToAdd : */
+
+.pizzaIngridientsToAdd {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.addIngridHeader {
+  background-color: rgba(244, 206, 116, 0.2);
+  height: 70px;
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.ingridItem {
+  width: 150px;
+  height: 150px;
+  background-color: blueviolet;
+  border: 3px solid red;
+  margin: 30px;
+}
+.ingridItemWithDescription .addPizzaBtn{
+  width: 70px;
+  height: 25px;
+  margin-top: 10px;
+}
+

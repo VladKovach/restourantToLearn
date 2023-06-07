@@ -1,0 +1,50 @@
+.grilPageHeadBar {
+  position: relative;
+  top: 80px;
+  height: 85px;
+  background-color: rgba(244, 206, 116, 0.2);
+  margin-top: 10px;
+  color: white;
+  font-family: cursive;
+  text-align: center;
+  z-index: -1;
+}
+.grilPageHeadBar h1 {
+  padding-top: 15px;
+}
+
+.grilItemWithDescription {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+.grilItem {
+  width: 200px;
+  height: 200px;
+  background-color: chocolate;
+  border: 3px solid red;
+}
+.grilItemWithDescription h3 {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+.grilItemWithDescription .weithOfgrilItem {
+  margin: 0 0 10px 0;
+}
+.grilItemWithDescription .buyItemBtn {
+  width: 70px;
+  height: 25px;
+}
+.grilItemWithDescription .grilItemPrice {
+  margin-bottom: 10px;
+}
+.grilItemWithDescription .addItemBtn {
+  width: 70px;
+  height: 25px;
+  margin-left: 10px;
+}

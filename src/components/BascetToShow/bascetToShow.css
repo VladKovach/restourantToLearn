@@ -1,0 +1,67 @@
+.bascetToShow {
+  width: 0;
+  height: 0;
+  background: transparent;
+  transition: none;
+}
+.bascetToShow .bascetDiv {
+  display: block;
+  background-image: url(/src/images/shopBascetLogo.png);
+  opacity: 0.7;
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 75px;
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+.bascetToShow :hover {
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+.bascetToShow :not(:hover) {
+  transition: 0.3s;
+  transform: scale(1);
+}
+/* @keyframes showBascet {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+} */
+.addingItemsAnimation .bascetDiv {
+  animation-name: addingAnimation;
+  animation-duration: 0.4s;
+}
+@keyframes addingAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.itemsCounter {
+  color: white;
+  position: fixed;
+  top: 101px;
+  right: 50px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.6);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

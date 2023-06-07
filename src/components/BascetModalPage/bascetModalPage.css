@@ -1,0 +1,128 @@
+.bascModalPageContainer {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  overflow-y: auto;
+  font-family: cursive;
+}
+.bascModalPageContainer.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.modalContent {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  min-width: 50vw;
+  transform: scale(0.5);
+  transition: 0.4s all;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+
+  top: 70px;
+}
+
+.modalContent.active {
+  transform: scale(1);
+}
+.modalContent h2 {
+  margin: 10px auto;
+}
+.modalContent hr {
+  width: 100%;
+  border-top: 2px solid rgba(0, 0, 0, 0.6);
+}
+.addedItemsContainer {
+  display: flex;
+  flex-direction: column;
+}
+.addedItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(32, 116, 12, 0.4);
+  margin: 10px;
+}
+.addedItem .itemLogo {
+  height: 80px;
+  width: 80px;
+  background-color: chocolate;
+  margin-bottom: 10px;
+}
+.addedItem .itemName {
+  font-size: 16px;
+  width: 140px;
+  margin-left: 10px;
+}
+.itemQuantityContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+}
+.plusBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+}
+.itemTotalPrice {
+  margin: 5px;
+}
+.quantityBtns {
+  padding: 10px 10px 12px;
+  display: flex;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 23px;
+  outline: none;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.quantityBtns:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.quantityBtns:focus {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+}
+.deleteItemBtn{
+  padding: 14px;
+}
