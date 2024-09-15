@@ -1,0 +1,32 @@
+.headBar {
+  background-color: #3e3e3e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 100%;
+  z-index: 1;
+}
+.container {
+  max-width: 1800px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.header_btn {
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  margin: 0 15px;
+}
+.socialLogos_container {
+  display: flex;
+  align-items: center;
+}
+.socialLogos_container button {
+  margin: 0 5px;
+}

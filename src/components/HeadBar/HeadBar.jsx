@@ -1,39 +1,54 @@
-import React from 'react'
-import './headBarBtns.css'
-import PizzaLogo from '../PizzaLogo/PizzaLogo'
-import { Link } from 'react-router-dom'
-const HeadBar = () => {
+import React from "react";
+import classes from "./headBar.module.css";
+import { Link } from "react-router-dom";
+import GetSvg from "../GetSvg/GetSvg";
+import BascetToShow from "../BascetToShow/BascetToShow";
+const HeadBar = ({
+  addToBascetClicked,
+  emptyCardItems,
+  setaddToBascetClicked,
+  setbuyBasketClicked,
+  addedItemsCounter,
+}) => {
   return (
-    <div className="headBar">
-      <Link to="/homePage">
-        <PizzaLogo />
-      </Link>
-      <div className="headBarNemuButn">
-        <Link to="/pizzaPage">
-          <button className="button-84 ">PIZZA</button>
+    <div className={classes.headBar}>
+      <div className={classes.container}>
+        <Link to="/homePage">
+          <GetSvg svg="shop" />
         </Link>
-        <Link to="/mainMenuPage">
-          <button className="button-84 ">MAIN MENU</button>
-        </Link>
+        <div className={classes.headBarNemuButn}>
+          <Link className={classes.header_btn} to="/pizzaPage">
+            <button>PIZZA</button>
+          </Link>
+          <Link className={classes.header_btn} to="/mainMenuPage">
+            <button>MAIN MENU</button>
+          </Link>
 
-        <Link to="/sushiPage">
-          <button className="button-84 ">SUSHI</button>
-        </Link>
+          <Link className={classes.header_btn} to="/sushiPage">
+            <button>SUSHI</button>
+          </Link>
 
-        <Link to="/grilPage">
-          <button className="button-84 ">GRIL</button>
-        </Link>
-      </div>
-      <div>
-        <a href="">
-          <button className="facebookBtn"></button>
-        </a>
-        <a href="">
-          <button className="instaBtn"> </button>
-        </a>
+          <Link className={classes.header_btn} to="/grilPage">
+            <button>GRIL</button>
+          </Link>
+        </div>
+        <div className={classes.socialLogos_container}>
+          <button>
+            <GetSvg svg="facebook" />
+          </button>
+          <button>
+            <GetSvg svg="instagram" />
+          </button>
+          <BascetToShow
+            isActive={addToBascetClicked && !emptyCardItems}
+            showBascetModalPage={setbuyBasketClicked}
+            resetClick={setaddToBascetClicked}
+            addedItemsCounter={addedItemsCounter}
+          />
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeadBar
+export default HeadBar;

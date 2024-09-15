@@ -1,42 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.app {
-  display: flex;
-  flex-direction: column;
+/* normalize styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and borders are included in element width/height */
 }
+
+html,
 body {
   background: linear-gradient(135deg, #000000 0%, #434343 100%);
   background-size: cover;
   margin: 0 0;
   font-family: "Poppins", sans-serif;
-  color: #ffffff;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height: 100%; /* Ensure full height of page */
+  line-height: 1.5; /* Improves readability */
+  color: #fff; /* Set default text color */
+  scroll-behavior: smooth; /* Smooth scrolling */
 }
-.headBar {
-  background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  height: 90px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 1;
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
-.headBarNemuButn button {
-  margin-left: 30px;
+ul,
+ol {
+  list-style: none;
 }
-.pizzaLogo {
-  background-image: url(/src/images/restourant_logo.jpg);
-  background-repeat: no-repeat;
+a {
+  text-decoration: none;
+  color: #fff; /* Set default text color */
+}
+input,
+button,
+textarea,
+select {
+  font-family: inherit; /* Use the font set on body */
+  font-size: inherit;
   border: none;
-  height: 80px;
-  margin-left: 15px;
-  padding: 2px 2px;
-  width: 68px;
-  cursor: pointer;
-  margin-bottom: 5px;
+  outline: none;
+  background: none;
 }
+button {
+  cursor: pointer; /* Ensure all buttons show a pointer cursor */
+  padding: 0;
+  background-color: transparent;
+  color: #fff; /* Set default text color */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+/* normalize styles */
+.app {
+  display: flex;
+  flex-direction: column;
+  max-width: 1800px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .facebookBtn {
   background-image: url(/src/images/facebok_logo.png);
   width: 32px;
@@ -57,30 +82,7 @@ body {
   margin-bottom: 5px;
   margin-left: 5px;
 }
-.getOnStoresBtns {
-  display: flex;
-  justify-content: center;
-  margin-top: 200px;
-}
-.getOnAppleStore {
-  background-image: url(/src/images/download-on-apple-store.jpg);
-  width: 300px;
-  height: 89px;
-  cursor: pointer;
-  border: 1px solid black;
-  border-radius: 10px;
-  margin-right: 5%;
-}
-.getOnGooglePlay {
-  background-image: url(/src/images/getOnGooglePlay.jpg);
-  width: 300px;
-  height: 89px;
-  cursor: pointer;
-  border: 4px solid black;
-  border-radius: 10px;
-  background-repeat: no-repeat;
-  margin-left: 5%;
-}
+
 .menuGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;

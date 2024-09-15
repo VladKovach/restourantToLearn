@@ -1,33 +1,33 @@
-import React, { useState } from 'react'
-import './styles/index.css'
-import FootBar from './components/FootBar/FootBar'
-import BascetToShow from './components/BascetToShow/BascetToShow'
-import HeadBar from './components/HeadBar/HeadBar'
-import BascetModalPage from './components/BascetModalPage/BascetModalPage'
-import PizzaPage from './components/PizzaPage/PizzaPage'
-import HomePage from './components/HomePage/HomePage'
-import MainMenuPage from './components/MainMenuPage/MainMenuPage'
-import SushiPage from './components/SushiPage/SushiPage'
-import GrilPage from './components/GrilPage/GrilPage'
-import { isIdEqual } from './components/FakeItemsPrices/FakeItemsPrices'
-import { Route, Routes } from 'react-router-dom'
+import React, { useState } from "react";
+import "./styles/index.css";
+import FootBar from "./components/FootBar/FootBar";
+import BascetToShow from "./components/BascetToShow/BascetToShow";
+import HeadBar from "./components/HeadBar/HeadBar";
+import BascetModalPage from "./components/BascetModalPage/BascetModalPage";
+import PizzaPage from "./components/PizzaPage/PizzaPage";
+import HomePage from "./components/HomePage/HomePage";
+import MainMenuPage from "./components/MainMenuPage/MainMenuPage";
+import SushiPage from "./components/SushiPage/SushiPage";
+import GrilPage from "./components/GrilPage/GrilPage";
+import { isIdEqual } from "./components/FakeItemsPrices/FakeItemsPrices";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-  const [addToBascetClicked, setaddToBascetClicked] = useState(false)
-  const [buybasketClicked, setbuyBasketClicked] = useState(false)
-  const [addedItems, setAddedItems] = useState([])
-  const [addedItemsCounter, setAddedItemsCounter] = useState(0)
+  const [addToBascetClicked, setaddToBascetClicked] = useState(false);
+  const [buybasketClicked, setbuyBasketClicked] = useState(false);
+  const [addedItems, setAddedItems] = useState([]);
+  const [addedItemsCounter, setAddedItemsCounter] = useState(0);
   const addItemHandler = (item, updateItems) => {
     if (updateItems) {
       if (updateItems[0].minus) {
-        setAddedItemsCounter(addedItemsCounter - 1)
-        setAddedItems(updateItems)
+        setAddedItemsCounter(addedItemsCounter - 1);
+        setAddedItems(updateItems);
       } else if (updateItems[0].plus) {
-        setAddedItemsCounter(addedItemsCounter + 1)
-        setAddedItems(updateItems)
+        setAddedItemsCounter(addedItemsCounter + 1);
+        setAddedItems(updateItems);
       }
     } else if (item) {
-      setAddedItemsCounter(addedItemsCounter + 1)
+      setAddedItemsCounter(addedItemsCounter + 1);
 
       if (isIdEqual(addedItems, item)) {
         const sameItems = addedItems.map((addedItem) => {
@@ -36,17 +36,17 @@ function App() {
             return {
               ...addedItem,
               quantity: addedItem.quantity + 1,
-            }
+            };
           }
-          return addedItem
-        })
+          return addedItem;
+        });
 
-        setAddedItems(sameItems)
+        setAddedItems(sameItems);
       } else {
-        setAddedItems([...addedItems, item])
+        setAddedItems([...addedItems, item]);
       }
     }
-  }
+  };
 
   // const updateItemsQuantity = (quantityList) => {
   //   setAddedItems(
@@ -57,39 +57,29 @@ function App() {
 
   //   console.log(addedItems)
   // }
-  const emptyCardItems = addedItemsCounter === 0
+  const emptyCardItems = addedItemsCounter === 0;
   // const updateAddedItemsCount = (infoItem) => {
   //   setAddedItemsCounter(addedItemsCounter - infoItem.quantity)
   // }
 
   const removeAddedItem = (itemToDelet) => {
-    setAddedItemsCounter(addedItemsCounter - itemToDelet.quantity)
-    setAddedItems(addedItems.filter((itm) => itm.id !== itemToDelet.id))
+    setAddedItemsCounter(addedItemsCounter - itemToDelet.quantity);
+    setAddedItems(addedItems.filter((itm) => itm.id !== itemToDelet.id));
     if (addedItems.length === 1) {
-      setbuyBasketClicked(false)
+      setbuyBasketClicked(false);
     }
-  }
+  };
 
   return (
     <div className="app medium">
-      <HeadBar />
-      {addToBascetClicked && !emptyCardItems ? (
-        <BascetToShow
-          showBascetModalPage={setbuyBasketClicked}
-          isItemAdded={addToBascetClicked}
-          resetClick={setaddToBascetClicked}
-          addedItemsCounter={addedItemsCounter}
-        />
-      ) : null}
-      
-      <BascetModalPage
-        active={buybasketClicked && !emptyCardItems}
-        setActive={setbuyBasketClicked}
-        addedItems={addedItems}
-        removeItem={removeAddedItem}
-        updateQuantity={addItemHandler}
+      <HeadBar
+        emptyCardItems={emptyCardItems}
+        addedItemsCounter={addedItemsCounter}
+        addToBascetClicked={addToBascetClicked}
+        setaddToBascetClicked={setaddToBascetClicked}
+        setbuyBasketClicked={setbuyBasketClicked}
       />
-      
+
       <Routes>
         <Route path="/homePage" element={<HomePage />} />
 
@@ -138,8 +128,18 @@ function App() {
         />
       </Routes>
       <FootBar />
+
+      {/*  popup */}
+
+      <BascetModalPage
+        active={buybasketClicked && !emptyCardItems}
+        setActive={setbuyBasketClicked}
+        addedItems={addedItems}
+        removeItem={removeAddedItem}
+        updateQuantity={addItemHandler}
+      />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
