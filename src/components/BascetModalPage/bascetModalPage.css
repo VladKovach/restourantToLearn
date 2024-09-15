@@ -15,7 +15,6 @@
   pointer-events: none;
   transition: 0.5s;
   overflow-y: auto;
-  font-family: cursive;
 }
 .bascModalPageContainer.active {
   opacity: 1;

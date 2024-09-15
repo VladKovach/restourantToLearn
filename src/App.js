@@ -71,7 +71,7 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className="app medium">
       <HeadBar />
       {addToBascetClicked && !emptyCardItems ? (
         <BascetToShow
@@ -81,7 +81,7 @@ function App() {
           addedItemsCounter={addedItemsCounter}
         />
       ) : null}
-      (
+      
       <BascetModalPage
         active={buybasketClicked && !emptyCardItems}
         setActive={setbuyBasketClicked}
@@ -89,7 +89,7 @@ function App() {
         removeItem={removeAddedItem}
         updateQuantity={addItemHandler}
       />
-      )
+      
       <Routes>
         <Route path="/homePage" element={<HomePage />} />
 

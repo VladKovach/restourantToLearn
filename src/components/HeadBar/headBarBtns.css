@@ -11,7 +11,7 @@
   cursor: pointer;
   display: inline-flex;
   flex-direction: column;
-  font-family: cursive;
+  
   font-size: 18px;
   height: 40px;
   width: min-content;
