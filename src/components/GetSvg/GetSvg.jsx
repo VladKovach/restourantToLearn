@@ -84,8 +84,8 @@ const GetSvg = ({ svg, width, height, color }) => {
         <svg
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
+          width={width || "50"}
+          height={height || "50"}
           fill="none"
           viewBox="0 0 24 24"
         >
