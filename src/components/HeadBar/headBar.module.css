@@ -1,11 +1,13 @@
 .headBar {
-  background-color: #3e3e3e;
+  background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   top: 0;
   left: 0;
   height: 90px;
   width: 100%;
   z-index: 1;
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.3); /* Shadow only at the bottom */
+
 }
 .container {
   max-width: 1800px;

@@ -49,7 +49,7 @@ const PizzaMenuItems = ({ pizzas, shwBascModPg, shwBasc, addItemFunk }) => {
                 quantity: piza.quantity,
               })
             }}
-            className="button-30 buyPizzaBtn"
+            className="customButton buyPizzaBtn"
           >
             Buy
           </button>
@@ -63,7 +63,7 @@ const PizzaMenuItems = ({ pizzas, shwBascModPg, shwBasc, addItemFunk }) => {
                 quantity: piza.quantity,
               })
             }}
-            className="button-30 addPizzaBtn"
+            className="customButton addPizzaBtn"
           >
             Add
           </button>

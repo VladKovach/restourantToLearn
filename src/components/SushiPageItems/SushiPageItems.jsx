@@ -28,7 +28,7 @@ const SushiPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
                 quantity: item.quantity,
               })
             }}
-            className="button-30 buyItemBtn"
+            className="customButton buyItemBtn"
           >
             Buy
           </button>
@@ -42,7 +42,7 @@ const SushiPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
                 quantity: item.quantity,
               })
             }}
-            className="button-30 addItemBtn"
+            className="customButton addItemBtn"
           >
             Add
           </button>

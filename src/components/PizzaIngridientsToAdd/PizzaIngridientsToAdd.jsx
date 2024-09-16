@@ -20,7 +20,7 @@ const PizzaIngridientsToAdd = ({ ingridients, shwBasc, addItemFunk }) => {
                 quantity: ingrid.quantity,
               })
             }}
-            className="button-30 addPizzaBtn"
+            className="customButton addPizzaBtn"
           >
             Add
           </button>
