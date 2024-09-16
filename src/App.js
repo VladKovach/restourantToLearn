@@ -71,74 +71,76 @@ function App() {
   };
 
   return (
-    <div className="app medium">
-      <HeadBar
-        emptyCardItems={emptyCardItems}
-        addedItemsCounter={addedItemsCounter}
-        addToBascetClicked={addToBascetClicked}
-        setaddToBascetClicked={setaddToBascetClicked}
-        setbuyBasketClicked={setbuyBasketClicked}
-      />
-
-      <Routes>
-        <Route path="/homePage" element={<HomePage />} />
-
-        <Route
-          path="/pizzaPage"
-          element={
-            <PizzaPage
-              addItemFunk={addItemHandler}
-              showBascetModalPage={setbuyBasketClicked}
-              showBascet={setaddToBascetClicked}
-            />
-          }
+    <>
+      <div className="app medium">
+        <HeadBar
+          emptyCardItems={emptyCardItems}
+          addedItemsCounter={addedItemsCounter}
+          addToBascetClicked={addToBascetClicked}
+          setaddToBascetClicked={setaddToBascetClicked}
+          setbuyBasketClicked={setbuyBasketClicked}
         />
 
-        <Route
-          path="/mainMenuPage"
-          element={
-            <MainMenuPage
-              addItemFunk={addItemHandler}
-              showBascetModalPage={setbuyBasketClicked}
-              showBascet={setaddToBascetClicked}
-            />
-          }
-        />
+        <Routes>
+          <Route path="/homePage" element={<HomePage />} />
 
-        <Route
-          path="/sushiPage"
-          element={
-            <SushiPage
-              addItemFunk={addItemHandler}
-              showBascetModalPage={setbuyBasketClicked}
-              showBascet={setaddToBascetClicked}
-            />
-          }
-        />
+          <Route
+            path="/pizzaPage"
+            element={
+              <PizzaPage
+                addItemFunk={addItemHandler}
+                showBascetModalPage={setbuyBasketClicked}
+                showBascet={setaddToBascetClicked}
+              />
+            }
+          />
 
-        <Route
-          path="/grilPage"
-          element={
-            <GrilPage
-              addItemFunk={addItemHandler}
-              showBascetModalPage={setbuyBasketClicked}
-              showBascet={setaddToBascetClicked}
-            />
-          }
+          <Route
+            path="/mainMenuPage"
+            element={
+              <MainMenuPage
+                addItemFunk={addItemHandler}
+                showBascetModalPage={setbuyBasketClicked}
+                showBascet={setaddToBascetClicked}
+              />
+            }
+          />
+
+          <Route
+            path="/sushiPage"
+            element={
+              <SushiPage
+                addItemFunk={addItemHandler}
+                showBascetModalPage={setbuyBasketClicked}
+                showBascet={setaddToBascetClicked}
+              />
+            }
+          />
+
+          <Route
+            path="/grilPage"
+            element={
+              <GrilPage
+                addItemFunk={addItemHandler}
+                showBascetModalPage={setbuyBasketClicked}
+                showBascet={setaddToBascetClicked}
+              />
+            }
+          />
+        </Routes>
+
+        {/*  popup */}
+
+        <BascetModalPage
+          active={buybasketClicked && !emptyCardItems}
+          setActive={setbuyBasketClicked}
+          addedItems={addedItems}
+          removeItem={removeAddedItem}
+          updateQuantity={addItemHandler}
         />
-      </Routes>
+      </div>
       <FootBar />
-
-      {/*  popup */}
-
-      <BascetModalPage
-        active={buybasketClicked && !emptyCardItems}
-        setActive={setbuyBasketClicked}
-        addedItems={addedItems}
-        removeItem={removeAddedItem}
-        updateQuantity={addItemHandler}
-      />
-    </div>
+    </>
   );
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 const PizzaHeadBar = () => {
   return (
     <div className="pizzaHeadBar">
-      <h1>PIZZA MENU</h1>
+      <h2>PIZZA MENU</h2>
     </div>
   )
 }

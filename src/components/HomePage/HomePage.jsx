@@ -1,16 +1,17 @@
-import React from 'react'
-import GetOnStoresBtns from '../GetOnStoresBtns/GetOnStoresBtns'
-import MenuWithFotos from '../MenuWithFotos/MenuWithFotos'
-import SearchComponent from '../SearchComponent/SearchComponent'
-
+import React from "react";
+import GetOnStoresBtns from "../GetOnStoresBtns/GetOnStoresBtns";
+import MenuWithFotos from "../MenuWithFotos/MenuWithFotos";
+import SearchComponent from "../SearchComponent/SearchComponent";
+import classes from "./homePage.module.css";
 const HomePage = () => {
   return (
-    <div>
-      <GetOnStoresBtns />
+    <div className={classes.wrapper}>
+      <p className={`${classes.title} medium-italic`}>Dive into various meals...</p>
       <MenuWithFotos />
+      <GetOnStoresBtns />
       <SearchComponent />
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

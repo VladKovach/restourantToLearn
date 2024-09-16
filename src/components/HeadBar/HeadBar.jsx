@@ -18,18 +18,18 @@ const HeadBar = ({
         </Link>
         <div className={classes.headBarNemuButn}>
           <Link className={classes.header_btn} to="/pizzaPage">
-            <button>PIZZA</button>
+            <button className="bold">PIZZA</button>
           </Link>
           <Link className={classes.header_btn} to="/mainMenuPage">
-            <button>MAIN MENU</button>
+            <button className="bold">MAIN MENU</button>
           </Link>
 
           <Link className={classes.header_btn} to="/sushiPage">
-            <button>SUSHI</button>
+            <button className="bold">SUSHI</button>
           </Link>
 
           <Link className={classes.header_btn} to="/grilPage">
-            <button>GRIL</button>
+            <button className="bold">GRIL</button>
           </Link>
         </div>
         <div className={classes.socialLogos_container}>

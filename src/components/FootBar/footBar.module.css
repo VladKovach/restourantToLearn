@@ -1,0 +1,28 @@
+.wrapper {
+  height: 300px;
+  background-color: #fff;
+}
+.footBar {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footerLogo {
+  margin-top: 30px;
+  height: 160px;
+  width: 145px;
+}
+.numberInFooter {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+.numberInFooter h1 {
+  margin: 15px 0 0 0;
+}
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

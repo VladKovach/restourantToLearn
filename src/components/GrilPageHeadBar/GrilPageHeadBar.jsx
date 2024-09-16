@@ -3,7 +3,7 @@ import React from 'react'
 const GrilPageHeadBar = () => {
   return <div>
     <div className="grilPageHeadBar">
-        <h1>GRIL</h1>
+        <h2>GRIL</h2>
       </div>
   </div>
 }

@@ -3,7 +3,7 @@ import React from 'react'
 const SushiPageHeadBar = () => {
   return <div>
     <div className="sushiPageHeadBar">
-        <h1>SUSHI</h1>
+        <h2>SUSHI</h2>
       </div>
   </div>
 }

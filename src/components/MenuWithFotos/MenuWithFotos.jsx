@@ -5,27 +5,35 @@ const MenuWithFotos = () => {
   return (
     <div className={classes.menuGrid}>
       <div className={classes.imageContainer}>
-        <Link className={classes.textContainer} to="/pizzaPage">
-          <img src="\images\foodImgs\pizzaForMenu.jpg" alt="" />
-          <h1 className="bottom-left">PIZZA</h1>
+        <Link to="/pizzaPage">
+          <div className={classes.textContainer}>
+            <img src="\images\foodImgs\pizzaForMenu.jpg" alt="" />
+            <h2 className={classes.text}>PIZZA</h2>
+          </div>
         </Link>
       </div>
       <div className={classes.imageContainer}>
-        <Link className={classes.textContainer} to="/grilPage">
-          <img src="\images\foodImgs\grilForMenu.jpg" alt="" />
-          <h1 className="bottom-left">GRIL</h1>
+        <Link to="/grilPage">
+          <div className={classes.textContainer}>
+            <img src="\images\foodImgs\grilForMenu.jpg" alt="" />
+            <h2 className={classes.text}>GRIL</h2>
+          </div>
         </Link>
       </div>
       <div className={classes.imageContainer}>
-        <Link className={classes.textContainer} to="/mainMenuPage">
-          <img src="\images\foodImgs\salatForMenu.jpg" alt="" />
-          <h1 className="bottom-left">MAIN MENU</h1>
+        <Link to="/mainMenuPage">
+          <div className={classes.textContainer}>
+            <img src="\images\foodImgs\salatForMenu.jpg" alt="" />
+            <h2 className={classes.text}>MAIN MENU</h2>
+          </div>
         </Link>
       </div>
       <div className={classes.imageContainer}>
-        <Link className={classes.textContainer} to="/sushiPage">
-          <img src="\images\foodImgs\sushiForMenu.jpg" alt="" />
-          <h1 className="bottom-left">SUSHI</h1>
+        <Link to="/sushiPage">
+          <div className={classes.textContainer}>
+            <img src="\images\foodImgs\sushiForMenu.jpg" alt="" />
+            <h2 className={classes.text}>SUSHI</h2>
+          </div>
         </Link>
       </div>
     </div>

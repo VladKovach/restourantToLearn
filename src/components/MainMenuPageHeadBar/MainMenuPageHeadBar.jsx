@@ -4,7 +4,7 @@ const MainMenuPageHeadBar = () => {
   return (
     <div>
       <div className="mainMenuHeadBar">
-        <h1>MAIN MENU</h1>
+        <h2>MAIN MENU</h2>
       </div>
     </div>
   )

@@ -2,29 +2,29 @@
 .menuGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 100px;
   text-align: center;
   gap: 40px; /* Adds spacing between grid items */
+  margin: 0 20px;
 }
 
 /* Grid items */
 .menuGrid div {
   margin-top: 30px;
-  margin-bottom: 30px;
 }
 
 /* Image container to center the images */
 .imageContainer {
+  position: relative; /* Needed for shadow effect */
   display: flex;
   justify-content: center;
-  position: relative; /* Needed for shadow effect */
 }
 
 /* Styling the images */
 .imageContainer img {
   border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow around the images */
+  box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.3); /* Adds a shadow around the images */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  width: 100%;
 }
 
 /* Hover effect on images: scaling and shadow change */
@@ -36,10 +36,24 @@
 /* Text container for captions */
 .textContainer {
   position: relative;
-  text-align: center;
   color: white;
-  font-size: 18px; /* Adjust font size for captions */
-  font-weight: bold; /* Makes text bolder */
-  margin-top: 10px; /* Adds spacing between image and text */
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Adds a subtle text shadow */
+}
+.text {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 22px;
+}
+@media (max-width: 767px) {
+  .menuGrid {
+    grid-template-columns: 1fr;
+  }
+  .text {
+    font-size: 18px;
+  }
+
+  .imageContainer a {
+    max-width: 80%;
+  }
 }

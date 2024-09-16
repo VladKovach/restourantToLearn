@@ -1,6 +1,6 @@
 import React from "react";
 
-const GetSvg = ({ svg, width, height }) => {
+const GetSvg = ({ svg, width, height, color }) => {
   console.log("svg = ", svg);
 
   switch (svg) {
@@ -90,7 +90,7 @@ const GetSvg = ({ svg, width, height }) => {
           viewBox="0 0 24 24"
         >
           <path
-            stroke="currentColor"
+            stroke={color || "currentColor"}
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
