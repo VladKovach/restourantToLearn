@@ -6,7 +6,7 @@ import classes from "./homePage.module.css";
 const HomePage = () => {
   return (
     <div className={classes.wrapper}>
-      <p className={`${classes.title} medium-italic`}>Dive into various meals...</p>
+      <p className="title medium-italic">Dive into various meals...</p>
       <SearchComponent />
 
       <MenuWithFotos />

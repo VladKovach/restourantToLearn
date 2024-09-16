@@ -51,7 +51,7 @@ const MainMenuPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
     )
   })
   return (
-    <div className="pizzaMenuItems">
+    <div className="mealsCardsItems">
       <div className="pizzaItemContainer">{itemsData}</div>
     </div>
   )

@@ -52,7 +52,7 @@ const GrilPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
     )
   })
   return (
-    <div className="pizzaMenuItems">
+    <div className="mealsCardsItems">
       <div className="pizzaItemContainer">{grilItems}</div>
     </div>
   )

@@ -1,15 +1,5 @@
-.mainMenuHeadBar {
-  position: relative;
-  top: 80px;
-  height: 85px;
-  background-color: rgba(244, 206, 116, 0.2);
-  margin-top: 10px;
-  color: white;
-  text-align: center;
-  z-index: -1;
-}
-.mainMenuHeadBar h1 {
-  padding-top: 15px;
+.mainMenu_page_wrapper {
+  margin-top:120px
 }
 
 .itemWithDescription {

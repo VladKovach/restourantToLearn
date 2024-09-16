@@ -73,7 +73,7 @@ const PizzaMenuItems = ({ pizzas, shwBascModPg, shwBasc, addItemFunk }) => {
   })
 
   return (
-    <div className="pizzaMenuItems">
+    <div className="mealsCardsItems">
       <div className="pizzaItemContainer">{allPizzasWithDescriptions}</div>
     </div>
   )

@@ -1,20 +1,21 @@
-import React from 'react'
-import MainMenuPageHeadBar from '../MainMenuPageHeadBar/MainMenuPageHeadBar'
-import MainMenuPageItems from '../MainMenuPageItems/MainMenuPageItems'
-import './mainMenu.css'
-import { mainMenuItems } from '../FakeItemsPrices/FakeItemsPrices'
-const MainMenuPage = ({ showBascetModalPage, showBascet,addItemFunk }) => {
+import React from "react";
+import MainMenuPageItems from "../MainMenuPageItems/MainMenuPageItems";
+import "./mainMenu.css";
+import { mainMenuItems } from "../FakeItemsPrices/FakeItemsPrices";
+const MainMenuPage = ({ showBascetModalPage, showBascet, addItemFunk }) => {
   return (
-    <div>
-      <MainMenuPageHeadBar />
+    <div className="mainMenu_page_wrapper">
+      <div className="title medium-italic">
+        <p>Main menu</p>
+      </div>
       <MainMenuPageItems
         shwBascModPg={showBascetModalPage}
         shwBasc={showBascet}
         items={mainMenuItems}
-        addItemFunk = {addItemFunk}
+        addItemFunk={addItemFunk}
       />
     </div>
-  )
-}
+  );
+};
 
-export default MainMenuPage
+export default MainMenuPage;
