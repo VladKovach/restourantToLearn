@@ -7,9 +7,10 @@ const HomePage = () => {
   return (
     <div className={classes.wrapper}>
       <p className={`${classes.title} medium-italic`}>Dive into various meals...</p>
+      <SearchComponent />
+
       <MenuWithFotos />
       <GetOnStoresBtns />
-      <SearchComponent />
     </div>
   );
 };

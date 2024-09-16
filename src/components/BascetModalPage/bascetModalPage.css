@@ -15,6 +15,7 @@
   pointer-events: none;
   transition: 0.5s;
   overflow-y: auto;
+  color: black;
 }
 .bascModalPageContainer.active {
   opacity: 1;
@@ -72,6 +73,17 @@
   align-items: center;
   margin-left: 25px;
 }
+.quantity_number {
+  display: inline-block;
+  width: 28px;
+  text-align: center;
+}
+.total_number {
+  width: 38px;
+  display: inline-block;
+
+  text-align: center;
+}
 .plusBtn {
   display: flex;
   justify-content: center;
@@ -122,6 +134,6 @@
 .quantityBtns:focus {
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
-.deleteItemBtn{
+.deleteItemBtn {
   padding: 14px;
 }

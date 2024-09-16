@@ -13,6 +13,7 @@
   max-width: 1800px;
   margin: 20px auto;
   display: flex;
+  padding: 0 20px;
   justify-content: space-between;
   align-items: center;
   height: 50px;
