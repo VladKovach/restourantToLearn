@@ -24,6 +24,8 @@
   justify-content: space-around;
 }
 .item_img {
+  max-width: 220px;
+  max-height: 150px;
   border-radius: 5px;
   box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
@@ -48,8 +50,12 @@
 }
 .pizaItemWithDescription select {
   margin: 10px 0 10px 0;
-  width: 60px;
+  width: 80px;
   cursor: pointer;
+  color: #fff;
+}
+.pizaItemWithDescription select option{
+  color: black;
 }
 .pizaItemWithDescription .buyPizzaBtn {
   width: 70px;
@@ -61,6 +67,7 @@
   margin-left: 10px;
 }
 
+
 /* pizzaIngridientsToAdd : */
 
 .pizzaIngridientsToAdd {
@@ -69,6 +76,10 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: center;
+}
+.addIngrid_title {
+  text-align: center;
+  font-size: 20px;
 }
 .addIngridHeader {
   background-color: rgba(244, 206, 116, 0.2);
@@ -85,7 +96,13 @@
   border: 3px solid red;
   margin: 30px;
 }
-.ingridItemWithDescription .addPizzaBtn {
+.ingridItemWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 10px;
+}
+.ingridItemWrapper .addPizzaBtn {
   width: 70px;
   height: 25px;
   margin-top: 10px;

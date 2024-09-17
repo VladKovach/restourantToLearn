@@ -35,7 +35,7 @@ const BascetModalPage = ({ active, setActive, addedItems, removeItem, updateQuan
         </div>
       </div>
       <div className="itemTotalPrice">
-        Total : <p className="total_number bold">{item.price * item.quantity}</p> $
+        Total : <p className="total_number bold">{(item.price * item.quantity).toFixed(2)}</p> $
       </div>
       <button onClick={() => removeItem(item)} className="deleteItemBtn quantityBtns">
         X

@@ -1,24 +1,24 @@
-import React from 'react'
+import React from "react";
 
 const PizzaIngridientsToAdd = ({ ingridients, shwBasc, addItemFunk }) => {
   const ingridArray = [...ingridients].map((ingrid, index) => {
-    ingrid.name = 'Some ingrid name' + ++index
+    ingrid.name = "Some ingrid name" + ++index;
     return (
-      <div key={ingrid.id} className="ingridItemWithDescription">
-        <div className="ingridItem"></div>
+      <div key={ingrid.id} className="ingridItemWrapper">
+        <img src="/images/foodImgs/ingridient.jpg" className="item_img"></img>
 
         <h3>{ingrid.name}</h3>
         <div className="price">Price: {ingrid.price}$</div>
         <div>
           <button
             onClick={() => {
-              shwBasc(true)
+              shwBasc(true);
               addItemFunk({
                 id: ingrid.id,
                 name: ingrid.name,
                 price: ingrid.price,
                 quantity: ingrid.quantity,
-              })
+              });
             }}
             className="customButton addPizzaBtn"
           >
@@ -26,17 +26,16 @@ const PizzaIngridientsToAdd = ({ ingridients, shwBasc, addItemFunk }) => {
           </button>
         </div>
       </div>
-    )
-  })
+    );
+  });
 
   return (
-    <div className="pizzaIngridientsToAdd">
-      <div className="addIngridHeader">
-        <h2>Add Ingridients</h2>
-      </div>
-      {ingridArray}
-    </div>
-  )
-}
+    <>
+ 
+      <p className="bold addIngrid_title">Add Ingridients</p>
+      <div className="pizzaIngridientsToAdd">{ingridArray}</div>
+    </>
+  );
+};
 
-export default PizzaIngridientsToAdd
+export default PizzaIngridientsToAdd;
