@@ -4,7 +4,7 @@
   justify-content: center;
 }
 .getOnAppleStore {
-  background-image: url(/src/images/download-on-apple-store.jpg);
+  background-image: url(/src/assets/images/download-on-apple-store.jpg);
   width: 300px;
   height: 89px;
   cursor: pointer;
@@ -13,7 +13,7 @@
   margin-right: 5%;
 }
 .getOnGooglePlay {
-  background-image: url(/src/images/getOnGooglePlay.jpg);
+  background-image: url(/src/assets/images/getOnGooglePlay.jpg);
   width: 300px;
   height: 89px;
   cursor: pointer;

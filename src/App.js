@@ -83,7 +83,9 @@ function App() {
 
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/restourant_learn" element={<HomePage />} />
 
+          
           <Route path="/home_page" element={<HomePage />} />
 
           <Route
