@@ -10,7 +10,7 @@ const GrilPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
     return (
       <div key={item.id} className="grilItemWithDescription">
         <a href="">
-          <div className="grilItem"></div>
+        <img src="/images/foodImgs/grilForMenu.jpg" className="item_img"></img>
         </a>
         <h3>{item.name}</h3>
 

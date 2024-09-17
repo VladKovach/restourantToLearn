@@ -1,22 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import {
   pizzasPrices32,
   pizzasPrices45,
   refreshPricesArr,
-} from '../FakeItemsPrices/FakeItemsPrices'
+} from "../FakeItemsPrices/FakeItemsPrices";
 const PizzaMenuItems = ({ pizzas, shwBascModPg, shwBasc, addItemFunk }) => {
-  const [pizaWithDmPrice, setPizaWithDmPrice] = useState([...pizzasPrices32])
+  const [pizaWithDmPrice, setPizaWithDmPrice] = useState([...pizzasPrices32]);
   const allPizzasWithDescriptions = [...pizzas].map((piza, index) => {
-    piza.name = 'Some piza name' + (index + 1)
+    piza.name = "Some piza name" + (index + 1);
     piza.description =
-      'Some piza description' +
+      "Some piza description" +
       (index + 1) +
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut nihil nemo rem. Molestiae, modi.'
-    piza.price = pizaWithDmPrice[index]
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut nihil nemo rem. Molestiae, modi.";
+    piza.price = pizaWithDmPrice[index];
     return (
       <div key={piza.id} className="pizaItemWithDescription">
         <a href="">
-          <div className="pizaItem"></div>
+          <img src="/images/foodImgs/pizzaForMenu.jpg" className="item_img"></img>
         </a>
         <h3>{piza.name}</h3>
 
@@ -24,14 +24,12 @@ const PizzaMenuItems = ({ pizzas, shwBascModPg, shwBasc, addItemFunk }) => {
         <div>Price: {piza.price}$</div>
         <select
           onClick={(e) => {
-            const value = e.target.value
+            const value = e.target.value;
             if (value == 45) {
-              
-              setPizaWithDmPrice(refreshPricesArr(pizaWithDmPrice, index, pizzasPrices45))
-
+              setPizaWithDmPrice(refreshPricesArr(pizaWithDmPrice, index, pizzasPrices45));
             }
             if (value == 32) {
-              setPizaWithDmPrice(refreshPricesArr(pizaWithDmPrice, index, pizzasPrices32))
+              setPizaWithDmPrice(refreshPricesArr(pizaWithDmPrice, index, pizzasPrices32));
             }
           }}
         >
@@ -41,13 +39,13 @@ const PizzaMenuItems = ({ pizzas, shwBascModPg, shwBasc, addItemFunk }) => {
         <div>
           <button
             onClick={() => {
-              shwBascModPg(true)
+              shwBascModPg(true);
               addItemFunk({
                 id: piza.id,
                 name: piza.name,
                 price: piza.price,
                 quantity: piza.quantity,
-              })
+              });
             }}
             className="customButton buyPizzaBtn"
           >
@@ -55,13 +53,13 @@ const PizzaMenuItems = ({ pizzas, shwBascModPg, shwBasc, addItemFunk }) => {
           </button>
           <button
             onClick={() => {
-              shwBasc(true)
+              shwBasc(true);
               addItemFunk({
                 id: piza.id,
                 name: piza.name,
                 price: piza.price,
                 quantity: piza.quantity,
-              })
+              });
             }}
             className="customButton addPizzaBtn"
           >
@@ -69,14 +67,14 @@ const PizzaMenuItems = ({ pizzas, shwBascModPg, shwBasc, addItemFunk }) => {
           </button>
         </div>
       </div>
-    )
-  })
+    );
+  });
 
   return (
     <div className="mealsCardsItems">
       <div className="pizzaItemContainer">{allPizzasWithDescriptions}</div>
     </div>
-  )
-}
+  );
+};
 
-export default PizzaMenuItems
+export default PizzaMenuItems;

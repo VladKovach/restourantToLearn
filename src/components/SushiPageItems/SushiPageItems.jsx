@@ -9,7 +9,7 @@ const SushiPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
     return (
       <div key={item.id} className="sushiItemWithDescription">
         <a href="">
-          <div className="sushiItem"></div>
+        <img src="/images/foodImgs/sushiForMenu.jpg" className="item_img"></img>
         </a>
         <h3>{item.name}</h3>
 

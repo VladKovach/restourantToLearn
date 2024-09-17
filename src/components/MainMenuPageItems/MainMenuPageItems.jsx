@@ -9,7 +9,7 @@ const MainMenuPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
     return (
       <div key={item.id} className="itemWithDescription">
         <a href="">
-          <div className="mainMenuItem"></div>
+        <img src="/images/foodImgs/salatForMenu.jpg" className="item_img"></img>
         </a>
         <h3>{item.name}</h3>
 

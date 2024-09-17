@@ -82,10 +82,12 @@ function App() {
         />
 
         <Routes>
-          <Route path="/homePage" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
+
+          <Route path="/home_page" element={<HomePage />} />
 
           <Route
-            path="/pizzaPage"
+            path="/pizza"
             element={
               <PizzaPage
                 addItemFunk={addItemHandler}
@@ -96,7 +98,7 @@ function App() {
           />
 
           <Route
-            path="/mainMenuPage"
+            path="/main_menu"
             element={
               <MainMenuPage
                 addItemFunk={addItemHandler}
@@ -107,7 +109,7 @@ function App() {
           />
 
           <Route
-            path="/sushiPage"
+            path="/sushi"
             element={
               <SushiPage
                 addItemFunk={addItemHandler}
@@ -118,7 +120,7 @@ function App() {
           />
 
           <Route
-            path="/grilPage"
+            path="/gril"
             element={
               <GrilPage
                 addItemFunk={addItemHandler}

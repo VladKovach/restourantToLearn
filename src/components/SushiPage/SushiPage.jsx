@@ -6,7 +6,7 @@ const SushiPage = ({ showBascetModalPage, showBascet, addItemFunk }) => {
   return (
     <div className="sushi_page_wrapper">
       <div className="title medium-italic">
-        <p>Pizza menu</p>
+        <p>Sushi menu</p>
       </div>
       <SushiPageItems
         shwBascModPg={showBascetModalPage}
