@@ -16,13 +16,12 @@
   width: 145px;
 }
 .phone {
+font-size: 22px;
   text-decoration: none;
   color: black;
   display: block;
 }
-.phone h1 {
-  margin: 15px 0 0 0;
-}
+
 .footerContent {
   display: flex;
   flex-direction: column;

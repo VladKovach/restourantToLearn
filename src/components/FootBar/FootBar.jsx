@@ -9,9 +9,7 @@ const FootBar = () => {
         <GetSvg svg="shop" color="black" width="80" height="80" />
       </Link>
       <div className={classes.footerContent}>
-        <Link className={classes.phone} to="/home_page">
-          <h2> + ( 999 ) 999 99 99</h2>
-        </Link>
+          <p className={`${classes.phone} bold-italic`}> + ( 999 ) 999 99 99</p>
         <h4> 45 Carmine Street New York, NY 100134 </h4>
       </div>
     </div>

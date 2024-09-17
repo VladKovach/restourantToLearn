@@ -1,19 +1,18 @@
-import React from 'react'
+import React from "react";
 
 import mainMenuImg from "../../assets/images/foodImgs/salatForMenu.jpg";
 
 const MainMenuPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
   const itemsData = [...items].map((item, index) => {
-    item.name = 'Some MainMenu Item Name ' + ++index
+    item.name = "Some MainMenu Item Name " + ++index;
     item.description =
-      'Some MainMenu Item description' +
+      "Some MainMenu Item description" +
       ++index +
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut nihil nemo rem. Molestiae, modi.'
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut nihil nemo rem. Molestiae, modi.";
     return (
       <div key={item.id} className="itemWithDescription">
-        <a href="">
         <img src={mainMenuImg} className="item_img"></img>
-        </a>
+
         <h3>{item.name}</h3>
 
         <p>{item.description}</p>
@@ -23,13 +22,13 @@ const MainMenuPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
         <div>
           <button
             onClick={() => {
-              shwBascModPg(true)
+              shwBascModPg(true);
               addItemFunk({
                 id: item.id,
                 name: item.name,
                 price: item.price,
                 quantity: item.quantity,
-              })
+              });
             }}
             className="customButton buyItemBtn"
           >
@@ -37,13 +36,13 @@ const MainMenuPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
           </button>
           <button
             onClick={() => {
-              shwBasc(true)
+              shwBasc(true);
               addItemFunk({
                 id: item.id,
                 name: item.name,
                 price: item.price,
                 quantity: item.quantity,
-              })
+              });
             }}
             className="customButton addItemBtn"
           >
@@ -51,13 +50,13 @@ const MainMenuPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
           </button>
         </div>
       </div>
-    )
-  })
+    );
+  });
   return (
     <div className="mealsCardsItems">
       <div className="pizzaItemContainer">{itemsData}</div>
     </div>
-  )
-}
+  );
+};
 
-export default MainMenuPageItems
+export default MainMenuPageItems;

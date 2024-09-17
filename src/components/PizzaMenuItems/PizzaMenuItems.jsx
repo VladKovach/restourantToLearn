@@ -17,9 +17,8 @@ const PizzaMenuItems = ({ pizzas, shwBascModPg, shwBasc, addItemFunk }) => {
     piza.price = pizaWithDmPrice[index];
     return (
       <div key={piza.id} className="pizaItemWithDescription">
-        <a href="">
-          <img src={pizzaImg} className="item_img"></img>
-        </a>
+        <img src={pizzaImg} className="item_img"></img>
+
         <h3>{piza.name}</h3>
 
         <p>{piza.description}</p>

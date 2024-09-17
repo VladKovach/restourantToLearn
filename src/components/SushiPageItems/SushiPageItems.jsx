@@ -1,18 +1,17 @@
-import React from 'react'
+import React from "react";
 import sushiImg from "../../assets/images/foodImgs/sushiForMenu.jpg";
 
 const SushiPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
   const sushiItems = [...items].map((item, index) => {
-    item.name = 'Some SushiItem Name ' + ++index
+    item.name = "Some SushiItem Name " + ++index;
     item.description =
-      'Some SushiItem description' +
+      "Some SushiItem description" +
       ++index +
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut nihil nemo rem. Molestiae, modi.'
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut nihil nemo rem. Molestiae, modi.";
     return (
       <div key={item.id} className="sushiItemWithDescription">
-        <a href="">
         <img src={sushiImg} className="item_img"></img>
-        </a>
+
         <h3>{item.name}</h3>
 
         <p>{item.description}</p>
@@ -22,13 +21,13 @@ const SushiPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
         <div>
           <button
             onClick={() => {
-              shwBascModPg(true)
+              shwBascModPg(true);
               addItemFunk({
                 id: item.id,
                 name: item.name,
                 price: item.price,
                 quantity: item.quantity,
-              })
+              });
             }}
             className="customButton buyItemBtn"
           >
@@ -36,13 +35,13 @@ const SushiPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
           </button>
           <button
             onClick={() => {
-              shwBasc(true)
+              shwBasc(true);
               addItemFunk({
                 id: item.id,
                 name: item.name,
                 price: item.price,
                 quantity: item.quantity,
-              })
+              });
             }}
             className="customButton addItemBtn"
           >
@@ -50,13 +49,13 @@ const SushiPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
           </button>
         </div>
       </div>
-    )
-  })
+    );
+  });
   return (
     <div className="mealsCardsItems">
       <div className="pizzaItemContainer">{sushiItems}</div>
     </div>
-  )
-}
+  );
+};
 
-export default SushiPageItems
+export default SushiPageItems;
