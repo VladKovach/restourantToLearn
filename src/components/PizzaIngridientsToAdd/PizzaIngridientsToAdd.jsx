@@ -1,11 +1,12 @@
 import React from "react";
+import ingridImg from "../../assets/images/foodImgs/ingridient.jpg";
 
 const PizzaIngridientsToAdd = ({ ingridients, shwBasc, addItemFunk }) => {
   const ingridArray = [...ingridients].map((ingrid, index) => {
     ingrid.name = "Some ingrid name" + ++index;
     return (
       <div key={ingrid.id} className="ingridItemWrapper">
-        <img src="/images/foodImgs/ingridient.jpg" className="item_img"></img>
+        <img src={ingridImg} className="item_img"></img>
 
         <h3>{ingrid.name}</h3>
         <div className="price">Price: {ingrid.price}$</div>

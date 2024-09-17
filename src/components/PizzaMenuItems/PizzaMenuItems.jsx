@@ -4,6 +4,8 @@ import {
   pizzasPrices45,
   refreshPricesArr,
 } from "../FakeItemsPrices/FakeItemsPrices";
+import pizzaImg from "../../assets/images/foodImgs/pizzaForMenu.jpg";
+
 const PizzaMenuItems = ({ pizzas, shwBascModPg, shwBasc, addItemFunk }) => {
   const [pizaWithDmPrice, setPizaWithDmPrice] = useState([...pizzasPrices32]);
   const allPizzasWithDescriptions = [...pizzas].map((piza, index) => {
@@ -16,7 +18,7 @@ const PizzaMenuItems = ({ pizzas, shwBascModPg, shwBasc, addItemFunk }) => {
     return (
       <div key={piza.id} className="pizaItemWithDescription">
         <a href="">
-          <img src="/images/foodImgs/pizzaForMenu.jpg" className="item_img"></img>
+          <img src={pizzaImg} className="item_img"></img>
         </a>
         <h3>{piza.name}</h3>
 

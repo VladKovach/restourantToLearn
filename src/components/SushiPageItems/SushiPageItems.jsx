@@ -1,4 +1,6 @@
 import React from 'react'
+import sushiImg from "../../assets/images/foodImgs/sushiForMenu.jpg";
+
 const SushiPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
   const sushiItems = [...items].map((item, index) => {
     item.name = 'Some SushiItem Name ' + ++index
@@ -9,7 +11,7 @@ const SushiPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
     return (
       <div key={item.id} className="sushiItemWithDescription">
         <a href="">
-        <img src="/images/foodImgs/sushiForMenu.jpg" className="item_img"></img>
+        <img src={sushiImg} className="item_img"></img>
         </a>
         <h3>{item.name}</h3>
 

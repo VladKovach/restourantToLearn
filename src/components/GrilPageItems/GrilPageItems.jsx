@@ -1,5 +1,6 @@
 import React from 'react'
-import MyRound10 from '../FakeItemsPrices/FakeItemsPrices'
+import grilImg from "../../assets/images/foodImgs/grilForMenu.jpg";
+
 const GrilPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
   const grilItems = [...items].map((item, index) => {
     item.name = 'Some GrilItem Name ' + ++index
@@ -10,7 +11,7 @@ const GrilPageItems = ({ items, shwBascModPg, shwBasc, addItemFunk }) => {
     return (
       <div key={item.id} className="grilItemWithDescription">
         <a href="">
-        <img src="/images/foodImgs/grilForMenu.jpg" className="item_img"></img>
+        <img src={grilImg} className="item_img"></img>
         </a>
         <h3>{item.name}</h3>
 

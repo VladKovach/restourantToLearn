@@ -62,26 +62,6 @@ button {
   padding-bottom: 60px;
 }
 
-.facebookBtn {
-  background-image: url(/src/images/facebok_logo.png);
-  width: 32px;
-  height: 50px;
-  border: none;
-  padding: 0 0;
-  cursor: pointer;
-  margin-bottom: 5px;
-  margin-right: 5px;
-}
-.instaBtn {
-  background-image: url(/src/images/instaIcon.png);
-  width: 45px;
-  height: 50px;
-  border: none;
-  padding: 0 0;
-  cursor: pointer;
-  margin-bottom: 5px;
-  margin-left: 5px;
-}
 .title {
   font-size: 35px;
   text-align: center;
