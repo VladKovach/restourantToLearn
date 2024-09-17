@@ -1,1 +1,1 @@
-# This is project for studing. I have implemented diferent functionalty
+# This is project for studing.
