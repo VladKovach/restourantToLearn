@@ -56,6 +56,18 @@ button {
   align-items: center;
   justify-content: center;
 }
+
+input:focus,
+textarea:focus,
+button:focus,
+button {
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent; /* Disable the tap highlight color */
+}
 /* normalize styles */
 .app {
   max-width: 1800px;

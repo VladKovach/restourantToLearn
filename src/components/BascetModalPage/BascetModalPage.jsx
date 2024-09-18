@@ -4,7 +4,7 @@ const BascetModalPage = ({ active, setActive, addedItems, removeItem, updateQuan
   const newAddedItems = addedItems.map((item, index) => (
     <div key={index + 5} className="addedItem">
       <div className="itemLogo"></div>
-      <h3 className="itemName">{item.name}</h3>
+      <p className="itemName">{item.name}</p>
       <div className="itemQuantityContainer">
         <div
           className="quantityBtns"
