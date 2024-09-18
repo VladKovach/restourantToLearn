@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/restourant_learn/static/css/main.f98036dd.css",
+    "main.css": "/restourant_learn/static/css/main.835bc715.css",
     "main.js": "/restourant_learn/static/js/main.dc878154.js",
     "static/media/ingridient.jpg": "/restourant_learn/static/media/ingridient.691e910e1a4647cd0d2b.jpg",
     "static/media/salatForMenu.jpg": "/restourant_learn/static/media/salatForMenu.2308889561c17868436f.jpg",
@@ -9,11 +9,11 @@
     "static/media/download-on-apple-store.jpg": "/restourant_learn/static/media/download-on-apple-store.b6120ef5a606ea7fe69f.jpg",
     "static/media/sushiForMenu.jpg": "/restourant_learn/static/media/sushiForMenu.f9bf139753bf6a33a390.jpg",
     "index.html": "/restourant_learn/index.html",
-    "main.f98036dd.css.map": "/restourant_learn/static/css/main.f98036dd.css.map",
+    "main.835bc715.css.map": "/restourant_learn/static/css/main.835bc715.css.map",
     "main.dc878154.js.map": "/restourant_learn/static/js/main.dc878154.js.map"
   },
   "entrypoints": [
-    "static/css/main.f98036dd.css",
+    "static/css/main.835bc715.css",
     "static/js/main.dc878154.js"
   ]
 }
